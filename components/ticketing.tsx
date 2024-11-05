@@ -45,7 +45,7 @@ export default function Ticketing() {
               </SelectTrigger>
               <SelectContent>
                 {availableTimes.map((timeSlot) => (
-                  <SelectItem key={timeSlot.id} value={timeSlot.time}>
+                  <SelectItem className="bg-background" key={timeSlot.id} value={timeSlot.time}>
                     {timeSlot.time}
                   </SelectItem>
                 ))}

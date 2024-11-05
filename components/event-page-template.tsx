@@ -3,7 +3,8 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
-import { Calendar, Utensils, Facebook, Wine, Instagram, Rocket, Twitter } from "lucide-react"
+import { Calendar, Utensils, Facebook, Wine, Instagram, Twitter } from "lucide-react"
+import "../app/globals.css";
 import Ticketing from "./ticketing"
 
 export function EventPageTemplate() {
@@ -27,7 +28,7 @@ export function EventPageTemplate() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="flex items-center justify-center w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-background text-foreground">
+        <section className="flex items-center justify-center w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-background/50 from-60% to-muted/40 text-foreground">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -38,13 +39,18 @@ export function EventPageTemplate() {
                   Join us for this incredible event! An unforgettable experience awaits you at this one-of-a-kind gathering.
                 </p>
               </div>
-              <Button size="lg">
-                Book Your Ticket
-              </Button>
+              <div className="flex justify-center gap-2">
+                <Button size="lg">
+                  Book Your Ticket
+                </Button>
+                <Button size="lg" variant="outline">
+                  Contact Us
+                </Button>
+              </div>
             </div>
           </div>
         </section>
-        <section id="about" className="flex items-center justify-center w-full py-12 md:py-24 lg:py-32 bg-secondary text-secondary-foreground">
+        <section id="about" className="flex items-center justify-center w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">About Our Event</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -64,7 +70,7 @@ export function EventPageTemplate() {
             </div>
           </div>
         </section>
-        <section id="tickets" className="flex items-center justify-center w-full py-12 md:py-24 lg:py-32 bg-background">
+        <section id="tickets" className="flex items-center justify-center w-full py-12 md:py-24 lg:py-32 bg-muted/40 text-muted-foreground">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8 text-foreground">Book Your Spot</h2>
             <div className="max-w-md mx-auto">
@@ -72,7 +78,7 @@ export function EventPageTemplate() {
             </div>
           </div>
         </section>
-        <section id="contact" className="flex items-center justify-center w-full py-12 md:py-24 lg:py-32 bg-secondary text-secondary-foreground">
+        <section id="contact" className="flex items-center justify-center w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -81,15 +87,15 @@ export function EventPageTemplate() {
                   Don't miss out on this amazing opportunity. Secure your spot at our event today!
                 </p>
               </div>
-              <Button size="lg" className="hover:bg-background">
+              <Button size="lg" variant="secondary">
                 Contact Us
               </Button>
             </div>
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-background text-foreground">
-        <p className="text-xs text-foreground">© 2024 Event Name. All rights reserved.</p>
+      <footer className="flex flex-col gap-2 sm:flex-row pt-12 pb-6 w-full shrink-0 items-center px-4 md:px-6 bg-gradient-to-b from-background to-muted text-muted-foreground">
+        <p className="text-xs">© 2024 Event Name. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="#">
             Terms of Service
@@ -99,15 +105,15 @@ export function EventPageTemplate() {
           </Link>
         </nav>
         <div className="flex gap-4 sm:gap-6">
-          <Link className="text-foreground hover:text-primary" href="#">
+          <Link href="#">
             <Facebook className="h-5 w-5" />
             <span className="sr-only">Facebook</span>
           </Link>
-          <Link className="text-foreground hover:text-primary" href="#">
+          <Link href="#">
             <Twitter className="h-5 w-5" />
             <span className="sr-only">Twitter</span>
           </Link>
-          <Link className="text-foreground hover:text-primary" href="#">
+          <Link href="#">
             <Instagram className="h-5 w-5" />
             <span className="sr-only">Instagram</span>
           </Link>
