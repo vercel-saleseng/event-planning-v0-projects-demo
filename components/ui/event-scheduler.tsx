@@ -42,7 +42,7 @@ export default function Component() {
           </div>
           <div className="space-y-2">
             <Label>Select Date</Label>
-            {// fix for width required: https://stackoverflow.com/questions/78196878/how-can-i-make-my-calendar-occupy-the-half-of-my-website-using-shadcn}
+            {/* fix for width required: https://stackoverflow.com/questions/78196878/how-can-i-make-my-calendar-occupy-the-half-of-my-website-using-shadcn} */}
             <Calendar
               mode="single"
               selected={date}
